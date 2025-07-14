@@ -1,0 +1,191 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makerspace - Activities</title>
+  <link rel="icon" type="image/jpeg" href="images/icon.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="activities.js" defer></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <header>
+      <div class="header-content">
+        <img src="images/reggie-lion.png" alt="Reggie the Lion" class="logo">
+        <h1>ma<span class="capital-k">K</span>e It Happen</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="activities.html">Activities</a>
+          <a href="forum.html">Forum</a>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="activities-main">
+      <div class="week-navigation">
+        <button id="prev-week" class="nav-button">‹</button>
+        <h2 id="current-week">Week of January 15-21, 2024</h2>
+        <button id="next-week" class="nav-button">›</button>
+      </div>
+      
+      <div class="activities-header">
+        <h1>Activities & Bookings</h1>
+      </div>
+
+      <div class="timetable-container">
+        <div class="time-labels">
+          <div class="time-slot">9:00</div>
+          <div class="time-slot">10:00</div>
+          <div class="time-slot">11:00</div>
+          <div class="time-slot">12:00</div>
+          <div class="time-slot">13:00</div>
+          <div class="time-slot">14:00</div>
+          <div class="time-slot">15:00</div>
+          <div class="time-slot">16:00</div>
+          <div class="time-slot">17:00</div>
+          <div class="time-slot">18:00</div>
+        </div>
+
+        <div class="timetable-grid">
+          <div class="day-column">
+            <div class="day-header">Monday</div>
+            <div class="day-schedule">
+              <div class="event workshop" data-start="2" data-duration="2" data-page="workshops/3d-printing.html">
+                <div class="event-title">3D Printing Workshop</div>
+                <div class="event-time">11:00 - 13:00</div>
+                <div class="event-instructor">Dr. Smith</div>
+              </div>
+              <div class="event drop-in" data-start="6" data-duration="3" data-page="drop-in.html">
+                <div class="event-title">Drop-in Session</div>
+                <div class="event-time">15:00 - 18:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <div class="day-header">Tuesday</div>
+            <div class="day-schedule">
+              <div class="event lecture" data-start="1" data-duration="1" data-page="lectures/robotics.html">
+                <div class="event-title">Robotics Seminar</div>
+                <div class="event-time">10:00 - 11:00</div>
+              </div>
+              <div class="event workshop" data-start="4" data-duration="3" data-page="workshops/electronics.html">
+                <div class="event-title">Electronics Basics</div>
+                <div class="event-time">13:00 - 16:00</div>
+                <div class="event-instructor">Prof. Johnson</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <div class="day-header">Wednesday</div>
+            <div class="day-schedule">
+              <div class="event drop-in" data-start="0" data-duration="3" data-page="drop-in.html">
+                <div class="event-title">Morning Drop-in</div>
+                <div class="event-time">09:00 - 12:00</div>
+              </div>
+              <div class="event hackathon" data-start="5" data-duration="4" data-page="events/hackathon.html">
+                <div class="event-title">Mini Hackathon</div>
+                <div class="event-time">14:00 - 18:00</div>
+                <div class="event-instructor">Team Event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <div class="day-header">Thursday</div>
+            <div class="day-schedule">
+              <div class="event workshop" data-start="1" data-duration="2" data-page="workshops/programming.html">
+                <div class="event-title">Python for Makers</div>
+                <div class="event-time">10:00 - 12:00</div>
+                <div class="event-instructor">Sarah Chen</div>
+              </div>
+              <div class="event consultation" data-start="6" data-duration="2" data-page="consultations.html">
+                <div class="event-title">Project Consultations</div>
+                <div class="event-time">15:00 - 17:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <div class="day-header">Friday</div>
+            <div class="day-schedule">
+              <div class="event drop-in" data-start="3" data-duration="3" data-page="drop-in.html">
+                <div class="event-title">Drop-in Session</div>
+                <div class="event-time">12:00 - 15:00</div>
+              </div>
+              <div class="event showcase" data-start="6" data-duration="3" data-page="events/showcase.html">
+                <div class="event-title">Project Showcase</div>
+                <div class="event-time">15:00 - 18:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column weekend">
+            <div class="day-header">Saturday</div>
+            <div class="day-schedule">
+              <div class="event event-closed" data-start="0" data-duration="9">
+                <div class="event-title">Closed</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-column weekend">
+            <div class="day-header">Sunday</div>
+            <div class="day-schedule">
+              <div class="event event-closed" data-start="0" data-duration="9">
+                <div class="event-title">Closed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="legend">
+          <h3>Legend</h3>
+          <div class="legend-grid">
+            <div class="legend-item">
+              <div class="legend-color workshop"></div>
+              <span>Workshops</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color drop-in"></div>
+              <span>Drop-in Sessions</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color lecture"></div>
+              <span>Lectures & Seminars</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color hackathon"></div>
+              <span>Events & Hackathons</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color consultation"></div>
+              <span>Consultations</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color showcase"></div>
+              <span>Showcases</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-booking">
+          <h3>Quick Actions</h3>
+          <div class="quick-actions">
+            <a href="book-session.html" class="action-button primary">Book Drop-in Session</a>
+            <a href="register-workshop.html" class="action-button secondary">Register for Workshop</a>
+            <a href="contact.html" class="action-button secondary">Request Consultation</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

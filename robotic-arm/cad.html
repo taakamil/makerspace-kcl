@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human-Robot Collaboration</title>
+  <link rel="icon" type="image/jpeg" href="../images/icon.jpeg">
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <div class="project-page">
+      <a href="../index.html" class="back-button" title="Back to Home"></a>
+      <h1>Human–Robot Collaboration</h1>
+
+      <div class="intro-section">
+        <p>Focus on effective interaction between humans and robots</p>
+        <div class="model-wrapper">
+          <model-viewer 
+            src="../models/robotarm.glb"
+            alt="3D view of the robotic arm"
+            auto-rotate 
+            camera-controls 
+            ar 
+            rotation-per-second="15deg"
+            orientation="0deg 270deg 0deg">
+            </model-viewer>
+          </model-viewer>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="step active">
+          <a href="#" tabindex="-1" aria-disabled="true"><div class="circle"></div></a>
+          <span>CAD Design</span>
+        </div>
+        <div class="step">
+          <a href="prototyping.html"><div class="circle"></div></a>
+          <span>Prototyping</span>
+        </div>
+        <div class="step">
+          <a href="programming.html"><div class="circle"></div></a>
+          <span>Programming</span>
+        </div>
+        <div class="step">
+          <a href="testing.html"><div class="circle"></div></a>
+          <span>Testing</span>
+        </div>
+      </div>
+
+
+
+
+
+      <section class="project-block">
+        <h2>Design & Development</h2>
+        <div class="project-content">
+          <img src="images/robotic-arm.jpg" alt="robotic arm">
+          <div>
+            <h3>Design & Development</h3>
+            <p>Research into applying reinforcement learning to improve robotic arm’s capabilities.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block">
+        <h2>Reinforcement Learning</h2>
+        <div class="project-content">
+          <img src="images/video-thumb.jpg" alt="video section">
+          <div>
+            <h3>Challenges and Insights</h3>
+            <p>Developing control algorithms and overcoming implementation issues during the training process.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
