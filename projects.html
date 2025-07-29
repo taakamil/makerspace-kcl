@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makerspace Dashboard</title>
+  
+  <!-- Mobile Web App Configuration -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/jpeg" href="images/icon.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- TEMPLATE: HEADER - Same as index.html -->
+    <header>
+      <div class="header-content">
+        <img src="images/reggie-lion.png" alt="Reggie the Lion" class="logo">
+        <h1><img src="images/logo red.png" alt="maKe" class= "make-logo"></h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+        </nav>
+      </div>
+    </header>
+    <!-- END TEMPLATE: HEADER -->
+
+    <main id="main-content">
+      <!-- TEMPLATE: PROJECT CARDS - Copy this template for new projects -->
+      
+      <!-- SIMPLE PROJECT CARD TEMPLATE -->
+      <a class="card" href="projects/wheelie.html">
+        <h2>Wheelie</h2>
+        <img class="card-img" src="images/wheelie.png" alt="Wheelie robot">
+        <p>A self-balancing robot</p>
+        <div class="tags">
+          <span class="tag">Robotics</span>
+          <span class="tag">Control Systems</span>
+        </div>
+      </a>
+
+      <!-- EXPANDABLE PROJECT CARD TEMPLATE (Advanced - for showcase projects) -->
+      <div class="card" id="robotic-arm-card" data-project="robotic-arm">
+        <h2>Robotic Arm</h2>
+        <img class="card-img" src="images/robotic-arm.webp" alt="Robotic Arm">
+        <p>Upcoming research</p>
+        <div class="tags">
+          <span class="tag">Robotics</span>
+          <span class="tag">Research</span>
+        </div>
+
+        <!-- Project content that expands below -->
+        <div class="project-content-wrapper" id="project-content-wrapper">
+          <div class="back-button" id="back-button" title="Close Project"></div>
+
+          <!-- CAD Section -->
+          <div class="project-section" id="cad-section">
+            <h1>Human–Robot Collaboration</h1>
+            <div class="intro-section">
+              <p>Focus on effective interaction between humans and robots</p>
+              <div class="model-wrapper">
+                <model-viewer 
+                  src="models/robotarm.glb"
+                  alt="3D view of the robotic arm"
+                  auto-rotate 
+                  camera-controls 
+                  ar 
+                  rotation-per-second="15deg"
+                  orientation="0deg 270deg 0deg">
+                </model-viewer>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="step active" data-section="cad">
+                <div class="circle"></div>
+                <span>CAD Design</span>
+              </div>
+              <div class="step" data-section="prototyping">
+                <div class="circle"></div>
+                <span>Prototyping</span>
+              </div>
+              <div class="step" data-section="programming">
+                <div class="circle"></div>
+                <span>Programming</span>
+              </div>
+              <div class="step" data-section="testing">
+                <div class="circle"></div>
+                <span>Testing</span>
+              </div>
+            </div>
+
+            <!-- PROJECT CONTENT BLOCKS - Update these sections -->
+            <section class="project-block">
+              <h2>Design & Development</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="robotic arm">
+                <div>
+                  <h3>Design & Development</h3>
+                  <p>Research into applying reinforcement learning to improve robotic arm's capabilities.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-block">
+              <h2>Reinforcement Learning</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="video section">
+                <div>
+                  <h3>Challenges and Insights</h3>
+                  <p>Developing control algorithms and overcoming implementation issues during the training process.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Prototyping Section -->
+          <div class="project-section" id="prototyping-section" style="display: none;">
+            <h1>Prototyping</h1>
+            <div class="intro-section">
+              <p>Exploring physical prototypes and iterative improvements.</p>
+            </div>
+
+            <div class="timeline"> 
+              <div class="step completed" data-section="cad">
+                <div class="circle"></div>
+                  <span>CAD Design</span>
+              </div>
+              <div class="step active" data-section="prototyping"> 
+                 <div class="circle"></div>
+                <span>Prototyping</span>
+              </div>
+              <div class="step" data-section="programming">
+                <div class="circle"></div>
+                <span>Programming</span>
+              </div>
+              <div class="step" data-section="testing">
+                <div class="circle"></div>  
+                <span>Testing</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Rapid Prototyping</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="prototype">
+                <div>
+                  <h3>Iterations & Learnings</h3>
+                  <p>Built and evaluated various form factors using 3D prints and low-cost materials.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-block">
+              <h2>Challenges</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="assembly process">
+                <div>
+                  <h3>Stability & Fit</h3>
+                  <p>Improving part tolerance, modularity, and system integration.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Programming Section -->
+          <div class="project-section" id="programming-section" style="display: none;">
+            <h1>Programming</h1>
+            <div class="intro-section">
+              <p>Developing control algorithms and software for the robotic arm.</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step completed" data-section="cad">
+                <div class="circle"></div>
+                <span>CAD Design</span>
+              </div>
+              <div class="step completed" data-section="prototyping">
+                <div class="circle"></div>
+                <span>Prototyping</span>
+              </div>
+              <div class="step active" data-section="programming">
+                <div class="circle"></div>
+                <span>Programming</span>
+              </div>
+              <div class="step" data-section="testing">
+                <div class="circle"></div>
+                <span>Testing</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Control Systems</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="control system diagram">
+                <div>
+                  <h3>Algorithm Development</h3>
+                  <p>Implementing PID controllers and motion planning algorithms for precise robotic arm movement.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-block">
+              <h2>Software Architecture</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="software architecture">
+                <div>
+                  <h3>System Integration</h3>
+                  <p>Building modular software components for sensor integration, motor control, and user interface.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Testing Section -->
+          <div class="project-section" id="testing-section" style="display: none;">
+            <h1>Testing</h1>
+            <div class="intro-section">
+              <p>Comprehensive testing and validation of the robotic arm system.</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step completed" data-section="cad">
+                <div class="circle"></div>
+                <span>CAD Design</span>
+              </div>
+              <div class="step completed" data-section="prototyping">
+                <div class="circle"></div>
+                <span>Prototyping</span>
+              </div>
+              <div class="step completed" data-section="programming">
+                <div class="circle"></div>
+                <span>Programming</span>
+              </div>
+              <div class="step active" data-section="testing">
+                <div class="circle"></div>
+                <span>Testing</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Performance Testing</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="performance testing">
+                <div>
+                  <h3>Accuracy & Precision</h3>
+                  <p>Measuring positioning accuracy, repeatability, and load handling capabilities of the robotic arm.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-block">
+              <h2>Safety Validation</h2>
+              <div class="project-content">
+                <img src="images/robotic-arm.webp" alt="safety testing">
+                <div>
+                  <h3>Compliance & Reliability</h3>
+                  <p>Ensuring the system meets safety standards and performs reliably under various operating conditions.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAMPLE: Second expandable card -->
+      <div class="card" id="ai-assistant-card" data-project="ai-assistant">
+        <h2>AI Assistant</h2>
+        <img class="card-img" src="images/wheelie.png" alt="AI Assistant">
+        <p>Intelligent voice assistant project</p>
+        <div class="tags">
+          <span class="tag">AI</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+
+        <!-- Project content that expands below -->
+        <div class="project-content-wrapper">
+          <div class="back-button" title="Close Project"></div>
+
+          <!-- Research Section -->
+          <div class="project-section" id="research-section">
+            <h1>AI Assistant Development</h1>
+            <div class="intro-section">
+              <p>Building an intelligent voice assistant using machine learning</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step active" data-section="research">
+                <div class="circle"></div>
+                <span>Research</span>
+              </div>
+              <div class="step" data-section="development">
+                <div class="circle"></div>
+                <span>Development</span>
+              </div>
+              <div class="step" data-section="training">
+                <div class="circle"></div>
+                <span>Training</span>
+              </div>
+              <div class="step" data-section="deployment">
+                <div class="circle"></div>
+                <span>Deployment</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Natural Language Processing</h2>
+              <div class="project-content">
+                <img src="images/wheelie.png" alt="NLP research">
+                <div>
+                  <h3>Language Understanding</h3>
+                  <p>Research into advanced NLP techniques for better human-computer interaction.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Development Section -->
+          <div class="project-section" id="development-section" style="display: none;">
+            <h1>Development</h1>
+            <div class="intro-section">
+              <p>Building the core assistant functionality</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step completed" data-section="research">
+                <div class="circle"></div>
+                <span>Research</span>
+              </div>
+              <div class="step active" data-section="development">
+                <div class="circle"></div>
+                <span>Development</span>
+              </div>
+              <div class="step" data-section="training">
+                <div class="circle"></div>
+                <span>Training</span>
+              </div>
+              <div class="step" data-section="deployment">
+                <div class="circle"></div>
+                <span>Deployment</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Voice Recognition</h2>
+              <div class="project-content">
+                <img src="images/wheelie.png" alt="voice recognition">
+                <div>
+                  <h3>Speech to Text</h3>
+                  <p>Implementing robust voice recognition capabilities for the assistant.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Training Section -->
+          <div class="project-section" id="training-section" style="display: none;">
+            <h1>Training</h1>
+            <div class="intro-section">
+              <p>Training the AI models for better performance</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step completed" data-section="research">
+                <div class="circle"></div>
+                <span>Research</span>
+              </div>
+              <div class="step completed" data-section="development">
+                <div class="circle"></div>
+                <span>Development</span>
+              </div>
+              <div class="step active" data-section="training">
+                <div class="circle"></div>
+                <span>Training</span>
+              </div>
+              <div class="step" data-section="deployment">
+                <div class="circle"></div>
+                <span>Deployment</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Model Training</h2>
+              <div class="project-content">
+                <img src="images/wheelie.png" alt="model training">
+                <div>
+                  <h3>Deep Learning</h3>
+                  <p>Training neural networks to understand and respond to user queries accurately.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Deployment Section -->
+          <div class="project-section" id="deployment-section" style="display: none;">
+            <h1>Deployment</h1>
+            <div class="intro-section">
+              <p>Deploying the assistant for real-world use</p>
+            </div>
+
+            <div class="timeline">
+              <div class="step completed" data-section="research">
+                <div class="circle"></div>
+                <span>Research</span>
+              </div>
+              <div class="step completed" data-section="development">
+                <div class="circle"></div>
+                <span>Development</span>
+              </div>
+              <div class="step completed" data-section="training">
+                <div class="circle"></div>
+                <span>Training</span>
+              </div>
+              <div class="step active" data-section="deployment">
+                <div class="circle"></div>
+                <span>Deployment</span>
+              </div>
+            </div>
+
+            <section class="project-block">
+              <h2>Production Ready</h2>
+              <div class="project-content">
+                <img src="images/wheelie.png" alt="deployment">
+                <div>
+                  <h3>Live Assistant</h3>
+                  <p>Successfully deployed AI assistant serving users with intelligent responses.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- MORE SIMPLE PROJECT CARDS - Copy the simple template above for new projects -->
+      
+      <!-- END TEMPLATE: PROJECT CARDS -->
+    </main>
+  </div>
+</body>
+</html>
